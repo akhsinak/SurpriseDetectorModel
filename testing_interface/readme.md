@@ -15,13 +15,13 @@ It includes:
 | ------------------------------------- | -------------------------------------------------------------------------- |
 | `final_pipeline_inference_code.ipynb` | Jupyter notebook containing the full pipeline for surprise-cause detection |
 | `streamLit_app.py`                    | Streamlit app for interacting with the pipeline via a web interface        |
-| `sample2.mkv`                         | Sample video file used for testing                                         |
-| `sample2.srt`                         | Subtitle file for `sample2.mkv`. Generated if not present                  |
+| `testvideo.mkv`                       | Sample video file used for testing                                         |
+| `testvideo.srt`                       | Subtitle file for `sample2.mkv`. Generated if not present                  |
 | `readme.md`                           | This README file                                                           |
 
 ---
 
-## Install all the required libraries
+## ⬇️ Install all the required libraries
 
 ```bash
 pip install -r requirements.txt
@@ -32,12 +32,12 @@ pip install -r requirements.txt
 1. Ensure that the following files are in the **same directory**:
 
    - `streamLit_app.py`
-   - A test `.mkv` video file (e.g., `sample2.mkv`)
-   - The corresponding `.srt` subtitle file (e.g., `sample2.srt`)
+   - A test `.mkv` video file (e.g., `testvideo.mkv`)
+   - The corresponding `.srt` subtitle file (e.g., `testvideo.srt`)
 
 2. model = load_trained_model('/Users/akhsinak/co/nlp_project/models/best_model_hubert.pth', device)
 
-- change this line according to where you load the model
+   - change this line according to where you load the model
 
 3. Run the app:
 
@@ -47,14 +47,15 @@ pip install -r requirements.txt
 
 4. If the .srt file is not present, the app will:
 
-- Use Google Speech-to-Text to generate subtitles
-- Segment the video using the transcript
+   - The code automatically uses Google Speech-to-Text to generate subtitles
+
+   - Segment the video using the transcript
 
 5. Streamlit app only produces a jSON which has all the surprise Yes or not markings in the file, this JSON file has to be passed to 2nd part of the pipeline ( 2nd part of pipeline is in the full_pipeline python notebook) for the Cause Extraction
 
 6. If all the pipeline has to be run in one go then please use the `final_pipeline_inference_code.ipynb`
 
-![project Structure](./readmeImages/streamlit.png)
+<img src="./readmeImages/streamlit.png" alt="project Structure" width="50%"/>
 
 ## 🚀 Running the `final_pipeline_inference_code.ipynb`
 

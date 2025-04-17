@@ -613,7 +613,7 @@ import tempfile
 
 st.set_page_config(page_title="Multimodal Emotion Inference", layout="wide")
 
-st.title("🎬 Multimodal Emotion Recognition Pipeline")
+st.title("🎬 Multimodal Surprise Recognition Pipeline")
 st.write("Upload a `.mkv` video file to analyze emotions using text, audio, and visual cues.")
 
 # === Upload Section

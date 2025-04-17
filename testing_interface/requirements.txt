@@ -1,0 +1,14 @@
+torch
+torchaudio
+torchvision
+transformers
+numpy
+opencv-python
+Pillow
+librosa
+matplotlib
+moviepy
+pydub
+google-cloud-speech
+pysrt
+requests
